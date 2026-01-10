@@ -1,0 +1,110 @@
+{
+    "sourceFile": "frontend/src/components/Hero.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1768054054522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768054827416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,17 @@\n import React from 'react'\r\n \r\n export const Hero = () => {\r\n   return (\r\n-    <div>Hero</div>\r\n+    <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n+        {/* hero left side */}\r\n+        <div className='w-full sm-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='text-[#414141]'> \r\n+            <div className='flex items-center gap-2'>\r\n+                <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>\r\n+                <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n+            </div>\r\n+        </div>\r\n+        </div>\r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768054897275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n         </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1768054902485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768054922564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768054980396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768054990479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/4 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055075391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n export const Hero = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n+    <div className='flex flex-col sm:flex-row border border-red-400'>\r\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n"
+                },
+                {
+                    "date": 1768055112967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import React from 'react'\r\n \r\n export const Hero = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:flex-row border border-red-400'>\r\n+    <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex  justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055125386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex  justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055139323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify- py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055148120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex items-center justify- py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify-between py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055157004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n         {/* hero left side */}\r\n-        <div className='w-full sm:w-1/2 flex items-center justify-between py-10 sm:py-0'>\r\n+        <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n"
+                },
+                {
+                    "date": 1768055326561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,13 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n+                {/* <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p> */}\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n+            <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n+\r\n         </div>\r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1768055333092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,13 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                {/* <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p> */}\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n-\r\n+            \r\n         </div>\r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1768055356897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n             \r\n"
+                },
+                {
+                    "date": 1768055368930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#c41818]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n             \r\n"
+                },
+                {
+                    "date": 1768055381431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-0.5 bg-[#c41818]'></p>\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n             \r\n"
+                },
+                {
+                    "date": 1768055457931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n-            \r\n+             <div className='flex items-center gap-2'>\r\n+                <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>\r\n+             </div>\r\n         </div>\r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1768055478732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n              <div className='flex items-center gap-2'>\r\n                 <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>\r\n+                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n              </div>\r\n         </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768055491401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,15 @@\n         {/* hero left side */}\r\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n-                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n+                <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n              <div className='flex items-center gap-2'>\r\n                 <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>\r\n-                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'>l</p>\r\n+                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n              </div>\r\n         </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768055598506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\r\n+import { assets } from '../assets/assets'\r\n \r\n export const Hero = () => {\r\n   return (\r\n     <div className='flex flex-col sm:flex-row border border-gray-400'>\r\n@@ -16,7 +17,9 @@\n                  <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n              </div>\r\n         </div>\r\n         </div>\r\n+        {/* hero right side  */}\r\n+        <img className='w-full sm:w-1/2' src={assets.hero_img} alt=\"\" />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768055944582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n                 <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n-            <h1 className='text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n+            <h1 className='prata-regular text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n              <div className='flex items-center gap-2'>\r\n                 <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>\r\n                  <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n              </div>\r\n"
+                },
+                {
+                    "date": 1768055990892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>\r\n         <div className='text-[#414141]'> \r\n             <div className='flex items-center gap-2'>\r\n                 <p className='w-8 md:w-11 h-0.5 bg-[#414141]'></p>\r\n-                <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>\r\n+                <p className='font-semibold text-sm md:text-base'>OUR BESTSELLERS</p>\r\n             </div>\r\n             <h1 className='prata-regular text-3xl md:text-5xl font-semibold'>Latest Arrivals</h1>\r\n              <div className='flex items-center gap-2'>\r\n                 <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>\r\n"
+                }
+            ],
+            "date": 1768054054522,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Hero = () => {\r\n  return (\r\n    <div>Hero</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

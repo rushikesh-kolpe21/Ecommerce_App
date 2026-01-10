@@ -1,0 +1,58 @@
+{
+    "sourceFile": "frontend/src/components/LatestCollection.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1768057451335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768059018685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n-import React from 'react'\r\n+import React, { useContext } from 'react'\r\n \r\n export const LatestCollection = () => {\r\n+\r\n+    const {products} = useContext(ShopContext);\r\n+    console.log(products)\r\n   return (\r\n     <div>LatestCollection</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768059072569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React, { useContext } from 'react'\r\n+import { ShopContext } from '../context/ShopContext';\r\n \r\n export const LatestCollection = () => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n"
+                },
+                {
+                    "date": 1768059771689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,16 @@\n import React, { useContext } from 'react'\r\n import { ShopContext } from '../context/ShopContext';\r\n+import { Title } from './Title';\r\n \r\n export const LatestCollection = () => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n     console.log(products)\r\n   return (\r\n-    <div>LatestCollection</div>\r\n+    <div className='my-10'>\r\n+        <div className='text-center py-8 text-3xl'>\r\n+            <Title/>\r\n+        </div>\r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768059833962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     console.log(products)\r\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n-            <Title/>\r\n+            <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768059967328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n+            <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'></p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768059981994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n-            <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'></p>\r\n+            <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias tempora beatae commodi quia odit! Obcaecati, vel vero perspiciatis reiciendis nobis itaque. Iusto itaque eos exercitationem impedit similique voluptatibus?</p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768060005842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias tempora beatae commodi quia odit! Obcaecati, vel vero perspiciatis reiciendis nobis itaque. Iusto itaque eos exercitationem impedit similique voluptatibus?</p>\r\n+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias tempora beatae commodi quia odit! Obcaecati, </p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768060015551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias tempora beatae commodi quia odit! Obcaecati, </p>\r\n+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias teme commodi quia odit! Obcaecati </p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768060247889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,17 @@\n-import React, { useContext } from 'react'\r\n+import React, {  useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext';\r\n import { Title } from './Title';\r\n \r\n export const LatestCollection = () => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n-    console.log(products)\r\n+    const [latestProducts,setLatestProducts] = useState([]);\r\n+\r\n+    useEffect(()=>{\r\n+        setLatestProducts(products.slice(0, 10))\r\n+    },[]);\r\n+\r\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n"
+                },
+                {
+                    "date": 1768060923768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,21 @@\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias teme commodi quia odit! Obcaecati </p>\r\n         </div>\r\n+        {/* rendering latest products */}\r\n+        <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-6 '>\r\n+            {\r\n+                latestProducts.map((product)=>(\r\n+                    <div key={product.id} className='text-gray-600 cursor-pointer'>\r\n+                        <div className='overflow-hidden '>\r\n+                            <img className='hover:scale-110 transition ease-in-out' src={product.image[0]} alt={product.name} />\r\n+                        </div>\r\n+                        <p className='pt-3 pb-1 text-sm'>{product.name}</p>\r\n+                        <p className='text-sm font-medium'>{product.currency} {product.price}</p>\r\n+                    </div>\r\n+                ))\r\n+            }\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1768057451335,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const LatestCollection = () => {\r\n  return (\r\n    <div>LatestCollection</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

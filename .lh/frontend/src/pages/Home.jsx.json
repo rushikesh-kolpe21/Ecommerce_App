@@ -1,0 +1,30 @@
+{
+    "sourceFile": "frontend/src/pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1768054019313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768054068877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n-      <Hero/>\r\n+      <Home/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768054076348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n+import { Hero } from '../components/Hero'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n-      <Home/>\r\n+      <Hero/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768059113230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import React from 'react'\r\n import { Hero } from '../components/Hero'\r\n+import { LatestCollection } from '../components/LatestCollection'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n       <Hero/>\r\n+      <LatestCollection/>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1768054019313,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Home = () => {\r\n  return (\r\n    <div>\r\n      <Hero/>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

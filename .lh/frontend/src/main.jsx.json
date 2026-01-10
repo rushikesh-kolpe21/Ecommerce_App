@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1768058478114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1768058478113,
+            "name": "Commit-0",
+            "content": "import { StrictMode } from 'react'\nimport { createRoot } from 'react-dom/client'\nimport { BrowserRouter } from 'react-router-dom'\nimport './index.css'\n\nimport { App } from './App'\nimport { ShopContextProvider } from './context/ShopContext'\n\ncreateRoot(document.getElementById('root')).render(\n  <StrictMode>\n    <BrowserRouter>\n     <ShopContextProvider>\n      <App />\n     </ShopContextProvider>\n    </BrowserRouter>\n  </StrictMode>\n)\n"
+        }
+    ]
+}

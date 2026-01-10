@@ -1,0 +1,50 @@
+{
+    "sourceFile": "frontend/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1768032598646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768032651011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032679393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032749386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='px-4 sm:px-[5vw] '>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032761738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] '>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032769620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='px-4 sm:px-[5vw] '>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032777106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] '>\n+    <div className='px-4 '>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032785835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 '>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768032813757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                }
+            ],
+            "date": 1768032598646,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport { Routes, Route } from 'react-router-dom'\n\nimport { Home } from './pages/Home'\nimport { Collection } from './pages/Collection'\nimport { About } from './pages/About'\nimport { Contact } from './pages/Contact'\nimport { Product } from './pages/Product'\nimport { Cart } from './pages/Cart'\nimport { Login } from './pages/Login'\nimport { PlaceOrder } from './pages/PlaceOrder'\nimport { Orders } from './pages/Orders'\nimport { Navbar } from './components/Navbar'\n\nexport const App = () => {\n  return (\n    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n      <Navbar />\n\n      <Routes>\n        <Route path='/' element={<Home />} />\n        <Route path='/collection' element={<Collection />} />\n        <Route path='/about' element={<About />} />\n        <Route path='/contact' element={<Contact />} />\n        <Route path='/product/:productId' element={<Product />} />\n        <Route path='/cart' element={<Cart />} />\n        <Route path='/login' element={<Login />} />\n        <Route path='/place-order' element={<PlaceOrder />} />\n        <Route path='/orders' element={<Orders />} />\n      </Routes>\n    </div>\n  )\n}\n"
+        }
+    ]
+}

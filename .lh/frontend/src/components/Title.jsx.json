@@ -1,0 +1,42 @@
+{
+    "sourceFile": "frontend/src/components/Title.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1768059508940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768059527541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n         \r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n-            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n+            <p className='text-gray-500'>{} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768059536404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n         \r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n-            <p className='text-gray-500'>{} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n+            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768059542581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n         \r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n-            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n+            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768059551324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n         \r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n-            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{}</span></p>\r\n+            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768059668741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n import React from 'react'\r\n \r\n-export const Title = () => {\r\n+export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        \r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n \r\n"
+                },
+                {
+                    "date": 1768059696168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     <div>\r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n-\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1768059508940,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Title = () => {\r\n  return (\r\n    <div>\r\n        \r\n        <div className='inline-flex gap-2 items-center mb-3'>\r\n            <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n            <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n\r\n        </div>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

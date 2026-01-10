@@ -1,0 +1,30 @@
+{
+    "sourceFile": "frontend/src/context/ShopContext.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1768057063072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768057451360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n         products,\r\n         currency,\r\n         delivery_fee\r\n     }\r\n+    \r\n     return (\r\n-        <ShopContext.Provider value={{}}>\r\n+        <ShopContext.Provider value={value}>\r\n             {props.children}\r\n         </ShopContext.Provider>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1768057625931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { createContext } from \"react\";\r\n import {products} from '../assets/assets';\r\n \r\n-export const ShopContext = createContext();\r\n+export const ShopContext = createContext(); // create context\r\n \r\n-const ShopContextProvider = (props) => {\r\n+ export const ShopContextProvider = (props) => {\r\n \r\n     const currency = '$';\r\n     const delivery_fee = 10;\r\n \r\n@@ -12,9 +12,9 @@\n         products,\r\n         currency,\r\n         delivery_fee\r\n     }\r\n-    \r\n+\r\n     return (\r\n         <ShopContext.Provider value={value}>\r\n             {props.children}\r\n         </ShopContext.Provider>\r\n"
+                },
+                {
+                    "date": 1768059037240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import {products} from '../assets/assets';\r\n \r\n export const ShopContext = createContext(); // create context\r\n \r\n- export const ShopContextProvider = (props) => {\r\n+ export const ShopContextProvider = (props) => { // context provider component\r\n \r\n     const currency = '$';\r\n     const delivery_fee = 10;\r\n \r\n"
+                }
+            ],
+            "date": 1768057063072,
+            "name": "Commit-0",
+            "content": "import { createContext } from \"react\";\r\nimport {products} from '../assets/assets';\r\n\r\nexport const ShopContext = createContext();\r\n\r\nconst ShopContextProvider = (props) => {\r\n\r\n    const currency = '$';\r\n    const delivery_fee = 10;\r\n\r\n    const value = {\r\n        products,\r\n        currency,\r\n        delivery_fee\r\n    }\r\n    return (\r\n        <ShopContext.Provider value={{}}>\r\n            {props.children}\r\n        </ShopContext.Provider>\r\n    )\r\n}"
+        }
+    ]
+}

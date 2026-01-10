@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+
+@import "tailwindcss";
+     
+a.active hr{
+    display: block
+}
