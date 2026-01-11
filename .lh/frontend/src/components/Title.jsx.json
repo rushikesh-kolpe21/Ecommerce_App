@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1768059508940,
@@ -32,6 +32,30 @@
                 {
                     "date": 1768059696168,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     <div>\r\n         <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n-\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768101268157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className='inline-flex gap-2 items-center mb-3'>\r\n+        <div className='inline-flex gap-2 items-left mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101282749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className='inline-flex gap-2 items-left mb-3'>\r\n+        <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101289411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className='inline-flex gap-2 items-center mb-3'>\r\n+        <div className='inline-flex gap-5 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101295506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className='inline-flex gap-5 items-center mb-3'>\r\n+        <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101327307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className='inline-flex gap-2 items-center mb-3'>\r\n+        <div className=' gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101335397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Title = ({text1, text2}) => {\r\n   return (\r\n     <div>\r\n-        <div className=' gap-2 items-center mb-3'>\r\n+        <div className='inline-flex gap-2 items-center mb-3'>\r\n             <p className='text-gray-500'>{text1} <span className='text-gray-700 font-medium'>{text2}</span></p>\r\n             <p className='w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700'></p>\r\n         </div>\r\n     </div>\r\n"
                 }
             ],
             "date": 1768059508940,

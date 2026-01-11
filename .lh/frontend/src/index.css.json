@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1768049694797,
@@ -20,6 +20,10 @@
                 {
                     "date": 1768055944581,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n a.active hr{\n     display: block\n }\n \n+* {\n+  font-family: Outfit;\n+}\n .prata-regular {\n   font-family: \"Prata\", serif;\n   font-weight: 400;\n   font-style: normal;\n"
+                },
+                {
+                    "date": 1768099146923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,12 @@\n   font-family: \"Prata\", serif;\n   font-weight: 400;\n   font-style: normal;\n }\n+\n+@media (max-width: 640px) {\n+  a.active{\n+    background-color: black;\n+    color: white;\n+  }\n+  \n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1768049694797,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1768054019313,
@@ -20,6 +20,22 @@
                 {
                     "date": 1768059113230,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import React from 'react'\r\n import { Hero } from '../components/Hero'\r\n+import { LatestCollection } from '../components/LatestCollection'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n       <Hero/>\r\n+      <LatestCollection/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768101045258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n import React from 'react'\r\n import { Hero } from '../components/Hero'\r\n import { LatestCollection } from '../components/LatestCollection'\r\n+import { BestSellers } from '../components/BestSellers'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n       <Hero/>\r\n       <LatestCollection/>\r\n+      <BestSellers/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768103466994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react'\r\n import { Hero } from '../components/Hero'\r\n import { LatestCollection } from '../components/LatestCollection'\r\n import { BestSellers } from '../components/BestSellers'\r\n+import { OurPolicy } from '../components/OurPolicy'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n       <Hero/>\r\n       <LatestCollection/>\r\n       <BestSellers/>\r\n+      <OurPolicy/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768104622049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,17 @@\n import { Hero } from '../components/Hero'\r\n import { LatestCollection } from '../components/LatestCollection'\r\n import { BestSellers } from '../components/BestSellers'\r\n import { OurPolicy } from '../components/OurPolicy'\r\n+import { NewsLetterBox } from '../components/NewsLetterBox'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n       <Hero/>\r\n       <LatestCollection/>\r\n       <BestSellers/>\r\n       <OurPolicy/>\r\n+      <NewsLetterBox/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768108559723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { LatestCollection } from '../components/LatestCollection'\r\n import { BestSellers } from '../components/BestSellers'\r\n import { OurPolicy } from '../components/OurPolicy'\r\n import { NewsLetterBox } from '../components/NewsLetterBox'\r\n+import { Footer } from '../components/Footer'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n@@ -12,7 +13,8 @@\n       <LatestCollection/>\r\n       <BestSellers/>\r\n       <OurPolicy/>\r\n       <NewsLetterBox/>\r\n+      <Footer/>\r\n     </div>\r\n   )\r\n }\r\n"
                 }
             ],
             "date": 1768054019313,

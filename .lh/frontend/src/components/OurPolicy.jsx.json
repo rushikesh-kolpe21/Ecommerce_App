@@ -1,0 +1,42 @@
+{
+    "sourceFile": "frontend/src/components/OurPolicy.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1768103146782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768103364106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,14 @@\n import React from 'react'\r\n+import { assets } from '../assets/assets'\r\n \r\n export const OurPolicy = () => {\r\n   return (\r\n-    <div>\r\n-        <div className=\"flex flex-col justify-around sm:flex-row gap-12  text-center py-20 text-xs sm:text-sm md:text-base text-gray-700\"></div>\r\n-    </div>\r\n+  \r\n+        <div className=\"flex flex-col justify-around sm:flex-row gap-12  text-center py-20 text-xs sm:text-sm md:text-base text-gray-700\">\r\n+            <div>\r\n+                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+            </div>\r\n+        </div>\r\n+    \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768103449850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   \r\n         <div className=\"flex flex-col justify-around sm:flex-row gap-12  text-center py-20 text-xs sm:text-sm md:text-base text-gray-700\">\r\n             <div>\r\n                 <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+                <p className='font-semibold'>Easy Exchange Policy</p>\r\n+                <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n             </div>\r\n         </div>\r\n     \r\n   )\r\n"
+                },
+                {
+                    "date": 1768103697687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,20 @@\n                 <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n                 <p className='font-semibold'>Easy Exchange Policy</p>\r\n                 <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n             </div>\r\n+\r\n+             <div>\r\n+                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+                <p className='font-semibold'>Easy Exchange Policy</p>\r\n+                <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n+            </div>\r\n+\r\n+             <div>\r\n+                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+                <p className='font-semibold'>Easy Exchange Policy</p>\r\n+                <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n+            </div>\r\n         </div>\r\n     \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768103947508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,17 +11,17 @@\n                 <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n             </div>\r\n \r\n              <div>\r\n-                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n-                <p className='font-semibold'>Easy Exchange Policy</p>\r\n-                <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n+                <img src={assets.quality_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+                <p className='font-semibold'>7 Days Return Policy</p>\r\n+                <p className='text-gray-400'>We provide 7 days free return policy</p>\r\n             </div>\r\n \r\n              <div>\r\n                 <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n-                <p className='font-semibold'>Easy Exchange Policy</p>\r\n-                <p className='text-gray-400'>We offer hassle free exchange policy</p>\r\n+                <p className='font-semibold'>Best customer support</p>\r\n+                <p className='text-gray-400'>We provide 24/7 customer support</p>\r\n             </div>\r\n         </div>\r\n     \r\n   )\r\n"
+                },
+                {
+                    "date": 1768103959812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n                 <p className='text-gray-400'>We provide 7 days free return policy</p>\r\n             </div>\r\n \r\n              <div>\r\n-                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n+                <img src={assets.exchange_icon} className='w-5 m-auto mb-5' alt=\"\" />\r\n                 <p className='font-semibold'>Best customer support</p>\r\n                 <p className='text-gray-400'>We provide 24/7 customer support</p>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1768103973799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n                 <p className='text-gray-400'>We provide 7 days free return policy</p>\r\n             </div>\r\n \r\n              <div>\r\n-                <img src={assets.exchange_icon} className='w-5 m-auto mb-5' alt=\"\" />\r\n+                <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt=\"\" />\r\n                 <p className='font-semibold'>Best customer support</p>\r\n                 <p className='text-gray-400'>We provide 24/7 customer support</p>\r\n             </div>\r\n         </div>\r\n"
+                }
+            ],
+            "date": 1768103146782,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const OurPolicy = () => {\r\n  return (\r\n    <div>\r\n        <div className=\"flex flex-col justify-around sm:flex-row gap-12  text-center py-20 text-xs sm:text-sm md:text-base text-gray-700\"></div>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

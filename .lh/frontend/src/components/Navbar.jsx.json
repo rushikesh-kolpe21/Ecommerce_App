@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 38,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1768032581181,
@@ -160,6 +160,10 @@
                 {
                     "date": 1768053241422,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,12 +60,12 @@\n               <div onClick={()=>setVisible(false)} className=' cursor-pointer flex items-center gap-4 p-3'>\r\n                 <img className=\"h-4 rotate-180\" src={assets.dropdown_icon} alt=\"\" />\r\n                 <p>Back</p>\r\n               </div>\r\n-              <NavLink className='py-2 pl-6 border' to='/'>Home</NavLink>\r\n-              <NavLink  className='py-2 pl-6 border' to='/collection'>Collection</NavLink>\r\n-              <NavLink  className='py-2 pl-6 border' to='/about'>About</NavLink>\r\n-              <NavLink  className='py-2 pl-6 border' to='/contact'>Contact</NavLink>\r\n+              <NavLink onClick={()=> setVisible(false)} className='py-2 pl-6 border' to='/'>Home</NavLink>\r\n+              <NavLink onClick={()=> setVisible(false)} className='py-2 pl-6 border' to='/collection'>Collection</NavLink>\r\n+              <NavLink onClick={()=> setVisible(false)} className='py-2 pl-6 border' to='/about'>About</NavLink>\r\n+              <NavLink onClick={()=> setVisible(false)} className='py-2 pl-6 border' to='/contact'>Contact</NavLink>\r\n             </div>\r\n           </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1768098945148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n   const [visible, setVisible] = useState(false);\r\n   return (\r\n     <div className=\"flex items-center justify-between py-5 font-medium\">\r\n-      <img src={assets.logo} className=\"w-36\" alt=\"\" />\r\n+     <Link to=\"/\"> <img src={assets.logo} className=\"w-36\" alt=\"\" /></Link>\r\n \r\n       <ul className=\" hidden sm:flex  gap-5 text-sm text-gray-700\">\r\n         <NavLink to=\"/\" className=\"flex flex-col items-center gap-1\">\r\n           <p>Home</p>\r\n@@ -47,9 +47,9 @@\n           </div>\r\n         </div>\r\n         <Link to=\"/card\" className=\"relative\">\r\n           <img src={assets.cart_icon} className=\"w-5\" alt=\"\" />\r\n-          <p className=\"absolute right-[-5px] bottom-[-5px] w- className='' 4 aspect-square text-center leading-4 bg-black text-white rounded-full text-[8px]\">\r\n+          <p className=\"absolute -right-1.25 -bottom-1.25 w-4 aspect-square text-center leading-4 bg-black text-white rounded-full text-[8px]\">\r\n             11\r\n           </p>\r\n         </Link>\r\n         <img onClick={()=>setVisible(true)} src={assets.menu_icon}  className='w-5 cursor-pointer sm:hidden' alt=\"\" />\r\n"
                 }
             ],
             "date": 1768032581181,

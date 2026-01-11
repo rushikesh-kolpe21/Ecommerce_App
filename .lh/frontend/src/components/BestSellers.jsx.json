@@ -1,0 +1,74 @@
+{
+    "sourceFile": "frontend/src/components/BestSellers.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1768100336784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768100563188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,18 @@\n-import React, { useContext, useState } from 'react'\r\n+import React, { useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext'\r\n \r\n export const BestSellers = () => {\r\n     const {products} = useContext(ShopContext);\r\n     const [BestSellers, setBestSellers] = useState([]);\r\n+\r\n+    useEffect(()=>{\r\n+        const BestProduct = products.filter((item)=>(item.BestSellers));\r\n+        setBestSellers(BestProduct);\r\n+    },[])\r\n+\r\n   return (\r\n-    <div>BestSellers</div>\r\n+    <div>\r\n+\r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768100743424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,16 @@\n     const {products} = useContext(ShopContext);\r\n     const [BestSellers, setBestSellers] = useState([]);\r\n \r\n     useEffect(()=>{\r\n-        const BestProduct = products.filter((item)=>(item.BestSellers));\r\n+        const BestProduct = products.filter((item)=>(item.bestseller));\r\n         setBestSellers(BestProduct);\r\n     },[])\r\n \r\n   return (\r\n-    <div>\r\n+    <div className='my-10'>\r\n+        <div className='text-center text-3xl py-8'></div>\r\n+        \r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768100998829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React, { useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext'\r\n+import { Title } from './Title';\r\n \r\n export const BestSellers = () => {\r\n     const {products} = useContext(ShopContext);\r\n     const [BestSellers, setBestSellers] = useState([]);\r\n@@ -11,9 +12,12 @@\n     },[])\r\n \r\n   return (\r\n     <div className='my-10'>\r\n-        <div className='text-center text-3xl py-8'></div>\r\n+        <div className='text-center text-3xl py-8'>\r\n+            <Title text1={'BEST'} text2={SELLERS}/>\r\n+            <P className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'></P>\r\n+        </div>\r\n         \r\n \r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1768101024318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center text-3xl py-8'>\r\n             <Title text1={'BEST'} text2={SELLERS}/>\r\n-            <P className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'></P>\r\n+            <P className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </P>\r\n         </div>\r\n         \r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101083753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center text-3xl py-8'>\r\n-            <Title text1={'BEST'} text2={SELLERS}/>\r\n+            <Title text1={'BEST'} text2={'SELLERS'}/>\r\n             <P className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </P>\r\n         </div>\r\n         \r\n"
+                },
+                {
+                    "date": 1768101106978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center text-3xl py-8'>\r\n             <Title text1={'BEST'} text2={'SELLERS'}/>\r\n-            <P className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </P>\r\n+            <p className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </p>\r\n         </div>\r\n         \r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768101132810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <div className='my-10'>\r\n         <div className='text-center text-3xl py-8'>\r\n             <Title text1={'BEST'} text2={'SELLERS'}/>\r\n-            <p className='w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n+            <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </p>\r\n         </div>\r\n         \r\n \r\n"
+                },
+                {
+                    "date": 1768101159135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     },[])\r\n \r\n   return (\r\n     <div className='my-10'>\r\n-        <div className='text-center text-3xl py-8'>\r\n+        <div className='text-left text-3xl py-8'>\r\n             <Title text1={'BEST'} text2={'SELLERS'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </p>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1768101165756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     },[])\r\n \r\n   return (\r\n     <div className='my-10'>\r\n-        <div className='text-left text-3xl py-8'>\r\n+        <div className='text-center text-3xl py-8'>\r\n             <Title text1={'BEST'} text2={'SELLERS'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </p>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1768102058033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React, { useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext'\r\n import { Title } from './Title';\r\n+import { ProductItem } from './ProductItem';\r\n \r\n export const BestSellers = () => {\r\n     const {products} = useContext(ShopContext);\r\n     const [BestSellers, setBestSellers] = useState([]);\r\n@@ -17,9 +18,19 @@\n             <Title text1={'BEST'} text2={'SELLERS'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi deserunt dolor. </p>\r\n         </div>\r\n-        \r\n+    \r\n+    {/* product show */}\r\n+    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 '>\r\n+            {\r\n+                BestSellers.map((index)=>{\r\n+                    return(\r\n+                        <ProductItem key={index} image={image} />\r\n+                    )\r\n+                })\r\n+            }\r\n+    </div>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768102083962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,11 @@\n     \r\n     {/* product show */}\r\n     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 '>\r\n             {\r\n-                BestSellers.map((index)=>{\r\n+                BestSellers.map((index,item)=>{\r\n                     return(\r\n-                        <ProductItem key={index} image={image} />\r\n+                        <ProductItem key={index} image={item.image} />\r\n                     )\r\n                 })\r\n             }\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768102132237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     \r\n     {/* product show */}\r\n     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 '>\r\n             {\r\n-                BestSellers.map((index,item)=>{\r\n+                BestSellers.map((item, index)=>{\r\n                     return(\r\n                         <ProductItem key={index} image={item.image} />\r\n                     )\r\n                 })\r\n"
+                },
+                {
+                    "date": 1768102720410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 '>\r\n             {\r\n                 BestSellers.map((item, index)=>{\r\n                     return(\r\n-                        <ProductItem key={index} image={item.image} />\r\n+                        <ProductItem key={index} id={item._id} name={item.name} image={item.image} />\r\n                     )\r\n                 })\r\n             }\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768102764965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 '>\r\n             {\r\n                 BestSellers.map((item, index)=>{\r\n                     return(\r\n-                        <ProductItem key={index} id={item._id} name={item.name} image={item.image} />\r\n+                        <ProductItem key={index} id={item._id} name={item.name} price={item.price} image={item.image} />\r\n                     )\r\n                 })\r\n             }\r\n     </div>\r\n"
+                }
+            ],
+            "date": 1768100336784,
+            "name": "Commit-0",
+            "content": "import React, { useContext, useState } from 'react'\r\nimport { ShopContext } from '../context/ShopContext'\r\n\r\nexport const BestSellers = () => {\r\n    const {products} = useContext(ShopContext);\r\n    const [BestSellers, setBestSellers] = useState([]);\r\n  return (\r\n    <div>BestSellers</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

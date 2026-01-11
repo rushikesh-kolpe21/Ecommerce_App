@@ -1,0 +1,110 @@
+{
+    "sourceFile": "frontend/src/components/Footer.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1768108361321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768108518488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n   return (\r\n     <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n+            <p className='w-full md:w-2/3 text-gray-600'>\r\n+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n+            </p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768108585788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div className='flex flex-row sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108595524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-row sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108600842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div className=' flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108622616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className=' flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div >\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108642531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div >\r\n+    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108649086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div className='flex flex-col sm:grid grid-cols-[1fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108659664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:grid grid-cols-[1fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n"
+                },
+                {
+                    "date": 1768108949853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,11 @@\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n             </p>\r\n         </div>\r\n+\r\n+        <div>\r\n+            <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109050980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,15 @@\n         </div>\r\n \r\n         <div>\r\n             <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n+            <ul className='flex flex-col gap-1 text-gray-500'>\r\n+                <li> Home</li>\r\n+                <li>About Us</li>\r\n+                <li> Delivery</li>\r\n+                <li>Contact Us</li>\r\n+                <li>Privacy Policy</li>\r\n+            </ul>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109128247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,11 @@\n                 <li>Contact Us</li>\r\n                 <li>Privacy Policy</li>\r\n             </ul>\r\n         </div>\r\n+\r\n+        <div>\r\n+            <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109287202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,13 @@\n         </div>\r\n \r\n         <div>\r\n             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>\r\n+            <ul className='flex flex-col gap-1 text-gray-500'>\r\n+                <li>+91 12345 67890</li>\r\n+                <li>email@example.com</li>\r\n+                <li>123 Street, City, Country</li>\r\n+            </ul>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109377133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             </p>\r\n         </div>\r\n \r\n         <div>\r\n-            <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n+            <p className='text-xl font-medium ml-2 mb-5'>COMPANY</p>\r\n             <ul className='flex flex-col gap-1 text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n                 <li> Delivery</li>\r\n"
+                },
+                {
+                    "date": 1768109388093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n             </p>\r\n         </div>\r\n \r\n         <div>\r\n-            <p className='text-xl font-medium ml-2 mb-5'>COMPANY</p>\r\n-            <ul className='flex flex-col gap-1 text-gray-500'>\r\n+            <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n+            <ul className='flex flex-col gap-1 ml-2 text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n                 <li> Delivery</li>\r\n                 <li>Contact Us</li>\r\n"
+                },
+                {
+                    "date": 1768109401671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         </div>\r\n \r\n         <div>\r\n             <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n-            <ul className='flex flex-col gap-1 ml-2 text-gray-500'>\r\n+            <ul className='flex flex-col gap-1 text-center text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n                 <li> Delivery</li>\r\n                 <li>Contact Us</li>\r\n"
+                },
+                {
+                    "date": 1768109411221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             </p>\r\n         </div>\r\n \r\n         <div>\r\n-            <p className='text-xl font-medium mb-5'>COMPANY</p>\r\n+            <p className='text-xl font-medium mb-5 border'>COMPANY</p>\r\n             <ul className='flex flex-col gap-1 text-center text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n                 <li> Delivery</li>\r\n"
+                },
+                {
+                    "date": 1768109427708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n             </p>\r\n         </div>\r\n \r\n         <div>\r\n-            <p className='text-xl font-medium mb-5 border'>COMPANY</p>\r\n-            <ul className='flex flex-col gap-1 text-center text-gray-500'>\r\n+            <p className='text-xl font-medium mb-5 '>COMPANY</p>\r\n+            <ul className='flex flex-col gap-1 ml-2 text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n                 <li> Delivery</li>\r\n                 <li>Contact Us</li>\r\n"
+                },
+                {
+                    "date": 1768109545674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,12 @@\n                 <li>email@example.com</li>\r\n                 <li>123 Street, City, Country</li>\r\n             </ul>\r\n         </div>\r\n+\r\n+        <div className=''>\r\n+            <hr />\r\n+            <p className='text-center text-gray-500'>&copy; 2024 Your Company. All rights reserved.</p>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109589801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         </div>\r\n \r\n         <div className=''>\r\n             <hr />\r\n-            <p className='text-center text-gray-500'>&copy; 2024 Your Company. All rights reserved.</p>\r\n+            <p className='text-center text-sm py-5 text-gray-500'>&copy; 2024 Your Company. All rights reserved.</p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109644933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,11 +30,8 @@\n                 <li>123 Street, City, Country</li>\r\n             </ul>\r\n         </div>\r\n \r\n-        <div className=''>\r\n-            <hr />\r\n-            <p className='text-center text-sm py-5 text-gray-500'>&copy; 2024 Your Company. All rights reserved.</p>\r\n-        </div>\r\n+        \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768109751798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import { assets } from '../assets/assets'\r\n \r\n export const Footer = () => {\r\n   return (\r\n-    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n+   <div>\r\n+     <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n         <div>\r\n             <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n             <p className='w-full md:w-2/3 text-gray-600'>\r\n                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat nostrum nobis nemo,\r\n@@ -32,6 +33,13 @@\n         </div>\r\n \r\n         \r\n     </div>\r\n+    <div className=''>\r\n+            <hr />\r\n+            <p className='text-center text-sm py-5 text-gray-500'>&copy; 2024 Your Company. All rights reserved.</p>\r\n+        </div>\r\n+\r\n+   </div>\r\n+    \r\n   )\r\n-}\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1768110081608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,11 +25,11 @@\n \r\n         <div>\r\n             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>\r\n             <ul className='flex flex-col gap-1 text-gray-500'>\r\n-                <li>+91 12345 67890</li>\r\n-                <li>email@example.com</li>\r\n-                <li>123 Street, City, Country</li>\r\n+                <li>+91 9371891154</li>\r\n+                <li>kolperushikesh1121@gmail.com</li>\r\n+                <li>plaza, Mumbai, India</li>\r\n             </ul>\r\n         </div>\r\n \r\n         \r\n"
+                },
+                {
+                    "date": 1768110114777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n             <p className='text-xl font-medium mb-5 '>COMPANY</p>\r\n             <ul className='flex flex-col gap-1 ml-2 text-gray-500'>\r\n                 <li> Home</li>\r\n                 <li>About Us</li>\r\n-                <li> Delivery</li>\r\n                 <li>Contact Us</li>\r\n                 <li>Privacy Policy</li>\r\n             </ul>\r\n         </div>\r\n"
+                }
+            ],
+            "date": 1768108361321,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport { assets } from '../assets/assets'\r\n\r\nexport const Footer = () => {\r\n  return (\r\n    <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>\r\n        <div>\r\n            <img src={assets.logo} className='mb-5 w-32'  alt=\"logo\" />\r\n        </div>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

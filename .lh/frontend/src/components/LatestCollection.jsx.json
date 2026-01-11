@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1768057451335,
@@ -48,6 +48,14 @@
                 {
                     "date": 1768060923768,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,21 @@\n             <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias teme commodi quia odit! Obcaecati </p>\r\n         </div>\r\n+        {/* rendering latest products */}\r\n+        <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-6 '>\r\n+            {\r\n+                latestProducts.map((product)=>(\r\n+                    <div key={product.id} className='text-gray-600 cursor-pointer'>\r\n+                        <div className='overflow-hidden '>\r\n+                            <img className='hover:scale-110 transition ease-in-out' src={product.image[0]} alt={product.name} />\r\n+                        </div>\r\n+                        <p className='pt-3 pb-1 text-sm'>{product.name}</p>\r\n+                        <p className='text-sm font-medium'>{product.currency} {product.price}</p>\r\n+                    </div>\r\n+                ))\r\n+            }\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768098480549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React, {  useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext';\r\n import { Title } from './Title';\r\n-\r\n+import { ProductItem } from './ProductItem';\r\n+// will\r\n export const LatestCollection = () => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n     const [latestProducts,setLatestProducts] = useState([]);\r\n@@ -20,16 +21,10 @@\n         </div>\r\n         {/* rendering latest products */}\r\n         <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-6 '>\r\n             {\r\n-                latestProducts.map((product)=>(\r\n-                    <div key={product.id} className='text-gray-600 cursor-pointer'>\r\n-                        <div className='overflow-hidden '>\r\n-                            <img className='hover:scale-110 transition ease-in-out' src={product.image[0]} alt={product.name} />\r\n-                        </div>\r\n-                        <p className='pt-3 pb-1 text-sm'>{product.name}</p>\r\n-                        <p className='text-sm font-medium'>{product.currency} {product.price}</p>\r\n-                    </div>\r\n+                latestProducts.map((item, index)=>(\r\n+                   <ProductItem  key={index} id={item._id} name={item.name} image={item.image[0]} currency={item.currency} price={item.price} />\r\n                 ))\r\n             }\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768098563633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         {/* rendering latest products */}\r\n         <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-6 '>\r\n             {\r\n                 latestProducts.map((item, index)=>(\r\n-                   <ProductItem  key={index} id={item._id} name={item.name} image={item.image[0]} currency={item.currency} price={item.price} />\r\n+                   <ProductItem  key={index} id={item._id} name={item.name} image={item.image} currency={item.currency} price={item.price} />\r\n                 ))\r\n             }\r\n         </div>\r\n     </div>\r\n"
                 }
             ],
             "date": 1768057451335,

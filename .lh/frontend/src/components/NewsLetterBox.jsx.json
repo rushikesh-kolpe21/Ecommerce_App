@@ -1,0 +1,102 @@
+{
+    "sourceFile": "frontend/src/components/NewsLetterBox.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1768104589127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768104844869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n export const NewsLetterBox = () => {\r\n   return (\r\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n+        <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768104996385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,16 @@\n   return (\r\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n+\r\n+        <form>\r\n+            <input \r\n+            type=\"text\"\r\n+            name='text'\r\n+            value={}\r\n+            onChange={}\r\n+            placeholder='Enter you email' />\r\n+        </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768105041890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,12 @@\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n         <form>\r\n-            <input \r\n-            type=\"text\"\r\n-            name='text'\r\n-            value={}\r\n-            onChange={}\r\n+            <input className='w-full sm:flex-1 outline-none'\r\n+            type=\"email\"\r\n+            name='email'\r\n+            \r\n             placeholder='Enter you email' />\r\n         </form>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1768105172095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,16 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form>\r\n+        <form  onSubmit={}>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             \r\n             placeholder='Enter you email' />\r\n+\r\n+            <button className='bg-black text-white text-xs px-10 py-4'>SUBSCRIBE</button>\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768105222367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form  onSubmit={}>\r\n+        <form className='w-full'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             \r\n"
+                },
+                {
+                    "date": 1768105277981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,12 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full'>\r\n+        <form className='w-1/2'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n-            \r\n             placeholder='Enter you email' />\r\n \r\n             <button className='bg-black text-white text-xs px-10 py-4'>SUBSCRIBE</button>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1768105284615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-1/2'>\r\n+        <form className='w-1/2 border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768105319009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-1/2 border'>\r\n+        <form className='w-full border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768105384125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center  border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768105410923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center  border'>\r\n+        <form className='w-full sm:w-1/2 flex   border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768105429083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex   border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center gap-3  border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768105446698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center gap-3  border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center gap-3 m-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107620917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const NewsLetterBox = () => {\r\n   return (\r\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n-        <p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n+        <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n         <form className='w-full sm:w-1/2 flex items-center gap-3 m-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n"
+                },
+                {
+                    "date": 1768107654580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center gap-3 m-auto border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center gap-3 mx-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107663244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center gap-3 mx-auto border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center gap-3  border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107901487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center gap-3  border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107911021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center my-4 gap-3 mx-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107916638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center my-4 gap-3 mx-auto border'>\r\n+        <form className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n             <input className='w-full sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768107942688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n         <form className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n-            <input className='w-full sm:flex-1 outline-none'\r\n+            <input className='w-full px-2 sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n \r\n"
+                },
+                {
+                    "date": 1768107985034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n import React from 'react'\r\n \r\n export const NewsLetterBox = () => {\r\n+\r\n+    const onSubmitHandler = (e) => {\r\n   return (\r\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n \r\n-        <form className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n+        <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex items-center my-2 gap-3 mx-auto border'>\r\n             <input className='w-full px-2 sm:flex-1 outline-none'\r\n             type=\"email\"\r\n             name='email'\r\n             placeholder='Enter you email' />\r\n"
+                },
+                {
+                    "date": 1768108366910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import React from 'react'\r\n \r\n export const NewsLetterBox = () => {\r\n \r\n-    const onSubmitHandler = (e) => {\r\n+    const onSubmitHandler = (event) => {\r\n+        event.preventDefault();\r\n+        \r\n+    }\r\n   return (\r\n     <div className='text-center'>\r\n         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n         <p className='text-gray-400 mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident, impedit </p>\r\n"
+                }
+            ],
+            "date": 1768104589127,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const NewsLetterBox = () => {\r\n  return (\r\n    <div className='text-center'>\r\n        <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off </p>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
