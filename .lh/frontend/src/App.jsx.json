@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1768032598646,
@@ -40,6 +40,14 @@
                 {
                     "date": 1768032813757,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'>\n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768111410201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'>\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'> // left and right spacing \n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
+                },
+                {
+                    "date": 1768111440288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n import { Navbar } from './components/Navbar'\n \n export const App = () => {\n   return (\n-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'> // left and right spacing \n+    // // left and right spacing\n+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'> \n       <Navbar />\n \n       <Routes>\n         <Route path='/' element={<Home />} />\n"
                 }
             ],
             "date": 1768032598646,

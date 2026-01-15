@@ -14,8 +14,7 @@ import { Navbar } from './components/Navbar'
 
 export const App = () => {
   return (
-    // // left and right spacing
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'> 
+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] xl:px-[11vw] 2xl:px-[13vw]'> // left and right spacing 
       <Navbar />
 
       <Routes>

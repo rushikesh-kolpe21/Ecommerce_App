@@ -1,4 +1,4 @@
-import React, {  useContext, useState,useEffect} from 'react'
+import React, { use, useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import { Title } from '../components/Title';
@@ -6,66 +6,12 @@ import { ProductItem } from '../components/ProductItem';
 
 export const Collection = () => {
   const {products} = useContext(ShopContext);
-
   const [showFilter, setShowFilter] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [categoryFilter, setCategoryFilter] = useState([]);
-  const [typeFilter, setTypeFilter] = useState([]);
-
-
-  // this code for only set category filter [men, women, kids]
-  const handleCategoryFilter = (event) => {
-    const value = event.target.value;
-    // remove item if already present
-    if(categoryFilter.includes(value)){
-      setCategoryFilter(categoryFilter.filter((item)=> item !== value));
-  }
-  else{
-    // add all item
-    setCategoryFilter(prev => [...prev, value])
-  }
-}
-
-// this code for only set type filter [topwear, bottomwear, winterwear]
-const handleTypeFilter=(event)=>{
-  const value = event.target.value;
-  if(typeFilter.includes(value)){
-    // remove item if already present
-    setTypeFilter(typeFilter.filter((item)=> item !== value));
-}else{
-  // add all item
-  setTypeFilter(prev => [...prev, value]);
-}
-
-}
-
-
-// this code for applying all filters  take men or women form handleCategoryFilter and filter products                                          
-const applyFilters = () => {
-  let productsAfterCategoryFilter = products.slice();
-  if(categoryFilter.length > 0){
-    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      categoryFilter.includes(item.category)
-    );
-  }
-  if(typeFilter.length > 0){
-    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      typeFilter.includes(item.subCategory)  //  Type filter is applied
-    );
-  }
-  setFilteredProducts(productsAfterCategoryFilter);
-}
-
-
-  useEffect(()=>{ 
-    setFilteredProducts(products);
-  },[products])
 
   useEffect(()=>{
-    applyFilters();
-  }, [categoryFilter, typeFilter])
-  
-  
+    setFilteredProducts(products);
+  },[])
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       {/* filter Option */}
@@ -77,13 +23,13 @@ const applyFilters = () => {
           <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Men'} onChange={handleCategoryFilter}/>Men
+              <input className='w-3' type='checkbox' value={'Men'}/>Men
             </p>
              <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Women'} onChange={handleCategoryFilter}/>Women
+              <input className='w-3' type='checkbox' value={'Women'}/>Women
             </p>
              <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Kids'} onChange={handleCategoryFilter}/>Kids
+              <input className='w-3' type='checkbox' value={'Kids'}/>Kids
             </p>
           </div>
         </div>
@@ -92,13 +38,13 @@ const applyFilters = () => {
           <p className='mb-3 text-sm font-medium'>TYPE</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Topwear'} onChange={handleTypeFilter}/>Topwear
+              <input className='w-3' type='checkbox' value={'Topwear'}/>Topwear
             </p>
              <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Bottomwear'} onChange={handleTypeFilter}/>Bottomwear
+              <input className='w-3' type='checkbox' value={'Bottomwear'}/>Bottomwear
             </p>
              <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Winterwear'} onChange={handleTypeFilter}/>Winterwear
+              <input className='w-3' type='checkbox' value={'Winterwear'}/>Winterwear
             </p>
           </div>
         </div>
@@ -118,10 +64,9 @@ const applyFilters = () => {
         {/* map products */}
        <div className='grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-y-6 gap-4'>
         {
-         
-          filteredProducts.map((item, index)=> (
+          filteredProducts.map((item, index)=> {
             <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
-          ))
+          })
         }
       </div>
 

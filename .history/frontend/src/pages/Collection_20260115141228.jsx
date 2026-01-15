@@ -1,4 +1,4 @@
-import React, {  useContext, useState,useEffect} from 'react'
+import React, {  useContext, useState,useEffect, use } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import { Title } from '../components/Title';
@@ -12,50 +12,35 @@ export const Collection = () => {
   const [categoryFilter, setCategoryFilter] = useState([]);
   const [typeFilter, setTypeFilter] = useState([]);
 
-
-  // this code for only set category filter [men, women, kids]
   const handleCategoryFilter = (event) => {
     const value = event.target.value;
-    // remove item if already present
     if(categoryFilter.includes(value)){
-      setCategoryFilter(categoryFilter.filter((item)=> item !== value));
+      setCategoryFilter(categoryFilter.filter((item)=> item !== value))
   }
   else{
-    // add all item
     setCategoryFilter(prev => [...prev, value])
   }
 }
 
-// this code for only set type filter [topwear, bottomwear, winterwear]
-const handleTypeFilter=(event)=>{
+const handleTypeFilter = (event) => {
   const value = event.target.value;
   if(typeFilter.includes(value)){
-    // remove item if already present
-    setTypeFilter(typeFilter.filter((item)=> item !== value));
-}else{
-  // add all item
-  setTypeFilter(prev => [...prev, value]);
+    setTypeFilter(typeFilter.filter((item)=> item !== value))
+}
+else{
+  setTypeFilter(prev => [...prev, value])
+}
 }
 
-}
-
-
-// this code for applying all filters  take men or women form handleCategoryFilter and filter products                                          
+//  apply filters
 const applyFilters = () => {
   let productsAfterCategoryFilter = products.slice();
   if(categoryFilter.length > 0){
-    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      categoryFilter.includes(item.category)
-    );
-  }
-  if(typeFilter.length > 0){
-    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      typeFilter.includes(item.subCategory)  //  Type filter is applied
-    );
+    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> categoryFilter.includes(item.category));
+
   }
   setFilteredProducts(productsAfterCategoryFilter);
 }
-
 
   useEffect(()=>{ 
     setFilteredProducts(products);
@@ -64,7 +49,7 @@ const applyFilters = () => {
   useEffect(()=>{
     applyFilters();
   }, [categoryFilter, typeFilter])
-  
+
   
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>

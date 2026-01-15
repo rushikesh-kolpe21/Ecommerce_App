@@ -63,6 +63,7 @@ const applyFilters = () => {
 
   useEffect(()=>{
     applyFilters();
+    
   }, [categoryFilter, typeFilter])
   
   

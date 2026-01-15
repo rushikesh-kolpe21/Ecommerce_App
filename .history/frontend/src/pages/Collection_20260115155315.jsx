@@ -18,10 +18,10 @@ export const Collection = () => {
     const value = event.target.value;
     // remove item if already present
     if(categoryFilter.includes(value)){
-      setCategoryFilter(categoryFilter.filter((item)=> item !== value));
+      setCategoryFilter(categoryFilter.filter((item)=> item !== value))
   }
   else{
-    // add all item
+    // add item
     setCategoryFilter(prev => [...prev, value])
   }
 }
@@ -30,10 +30,8 @@ export const Collection = () => {
 const handleTypeFilter=(event)=>{
   const value = event.target.value;
   if(typeFilter.includes(value)){
-    // remove item if already present
     setTypeFilter(typeFilter.filter((item)=> item !== value));
 }else{
-  // add all item
   setTypeFilter(prev => [...prev, value]);
 }
 
@@ -50,19 +48,18 @@ const applyFilters = () => {
   }
   if(typeFilter.length > 0){
     productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      typeFilter.includes(item.subCategory)  //  Type filter is applied
+      typeFilter.includes(item.type)  // ✅ Type filter is applied
     );
   }
   setFilteredProducts(productsAfterCategoryFilter);
 }
-
-
   useEffect(()=>{ 
     setFilteredProducts(products);
   },[products])
 
   useEffect(()=>{
     applyFilters();
+    
   }, [categoryFilter, typeFilter])
   
   

@@ -30,10 +30,8 @@ export const Collection = () => {
 const handleTypeFilter=(event)=>{
   const value = event.target.value;
   if(typeFilter.includes(value)){
-    // remove item if already present
     setTypeFilter(typeFilter.filter((item)=> item !== value));
 }else{
-  // add all item
   setTypeFilter(prev => [...prev, value]);
 }
 
@@ -50,7 +48,7 @@ const applyFilters = () => {
   }
   if(typeFilter.length > 0){
     productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> 
-      typeFilter.includes(item.subCategory)  //  Type filter is applied
+      typeFilter.includes(item.subCategory)  // ✅ Type filter is applied
     );
   }
   setFilteredProducts(productsAfterCategoryFilter);
@@ -63,6 +61,7 @@ const applyFilters = () => {
 
   useEffect(()=>{
     applyFilters();
+    
   }, [categoryFilter, typeFilter])
   
   
