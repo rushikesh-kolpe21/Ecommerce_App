@@ -1,0 +1,50 @@
+{
+    "sourceFile": "frontend/src/components/RelatedProducts.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1768648521851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768648935123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,22 @@\n-import React, { useContext } from 'react'\r\n-import { ShopContext } from '../context/ShopContext';'\r\n+import React, { use, useContext, useState } from 'react'\r\n+import { ShopContext } from '../context/ShopContext';\r\n \r\n-export const RelatedProducts = ({category,subCategory}) => {\r\n+export const RelatedProducts = ({categoryFilter,typeFilter}) => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n+    const [relatedProducts, setRelatedProducts] = useState([]);\r\n+\r\n+    useEffect(()=>{\r\n+        if(products.length > 0){\r\n+\r\n+            let productsCopy = products.slice();\r\n+            productsCopy = productsCopy.filter((item)=>categoryFilter === item.category && typeFilter === item.subCategory);\r\n+            setRelatedProducts(productsCopy.slice(0,4)); // set only 4 related products\r\n+\r\n+        }\r\n+    },[products]);\r\n+\r\n   return (\r\n     <div>\r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1768649099064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if(products.length > 0){\r\n \r\n             let productsCopy = products.slice();\r\n             productsCopy = productsCopy.filter((item)=>categoryFilter === item.category && typeFilter === item.subCategory);\r\n-            setRelatedProducts(productsCopy.slice(0,4)); // set only 4 related products\r\n+            setRelatedProducts(productsCopy.slice(0,5)); // set only 5 related products\r\n \r\n         }\r\n     },[products]);\r\n \r\n"
+                },
+                {
+                    "date": 1768649253833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React, { use, useContext, useState } from 'react'\r\n+import React, { use, useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext';\r\n \r\n export const RelatedProducts = ({categoryFilter,typeFilter}) => {\r\n \r\n"
+                },
+                {
+                    "date": 1768649391389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n \r\n             let productsCopy = products.slice();\r\n             productsCopy = productsCopy.filter((item)=>categoryFilter === item.category && typeFilter === item.subCategory);\r\n             setRelatedProducts(productsCopy.slice(0,5)); // set only 5 related products\r\n+            console.log(productsCopy.slice(0,5));\r\n \r\n         }\r\n     },[products]);\r\n \r\n"
+                },
+                {
+                    "date": 1768649767538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n             let productsCopy = products.slice();\r\n             productsCopy = productsCopy.filter((item)=>categoryFilter === item.category && typeFilter === item.subCategory);\r\n             setRelatedProducts(productsCopy.slice(0,5)); // set only 5 related products\r\n-            console.log(productsCopy.slice(0,5));\r\n+            // console.log(productsCopy.slice(0,5));\r\n \r\n         }\r\n     },[products]);\r\n \r\n"
+                },
+                {
+                    "date": 1768649831684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React, { use, useContext, useEffect, useState } from 'react'\r\n import { ShopContext } from '../context/ShopContext';\r\n+import { ProductItem } from './ProductItem';\r\n+import { Title } from './Title';\r\n \r\n export const RelatedProducts = ({categoryFilter,typeFilter}) => {\r\n \r\n     const {products} = useContext(ShopContext);\r\n@@ -17,9 +19,23 @@\n         }\r\n     },[products]);\r\n \r\n   return (\r\n-    <div>\r\n-\r\n+    <div className='my-24'>\r\n+        <div className='text-center py-8 text-3xl'>\r\n+            <Title text1={'Related'} text2={'Products'} />\r\n+        </div>\r\n+        \r\n+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>\r\n+            {relatedProducts.map((item, index)=>(\r\n+                <ProductItem \r\n+                    key={index}\r\n+                    id={item._id} \r\n+                    name={item.name} \r\n+                    price={item.price} \r\n+                    image={item.image}\r\n+                />\r\n+            ))}\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1768649858722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n     },[products]);\r\n \r\n   return (\r\n-    <div className='my-24'>\r\n+    <div className='my-11'>\r\n         <div className='text-center py-8 text-3xl'>\r\n             <Title text1={'Related'} text2={'Products'} />\r\n         </div>\r\n         \r\n"
+                },
+                {
+                    "date": 1768649926846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   return (\r\n     <div className='my-11'>\r\n         <div className='text-center py-8 text-3xl'>\r\n-            <Title text1={'Related'} text2={'Products'} />\r\n+            <Title text1={'RELATED '} text2={'PRODUCTS'} />\r\n         </div>\r\n         \r\n         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>\r\n             {relatedProducts.map((item, index)=>(\r\n"
+                }
+            ],
+            "date": 1768648521851,
+            "name": "Commit-0",
+            "content": "import React, { useContext } from 'react'\r\nimport { ShopContext } from '../context/ShopContext';'\r\n\r\nexport const RelatedProducts = ({category,subCategory}) => {\r\n\r\n    const {products} = useContext(ShopContext);\r\n  return (\r\n    <div>\r\n\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

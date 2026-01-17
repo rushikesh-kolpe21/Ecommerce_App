@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 39,
+            "activePatchIndex": 41,
             "patches": [
                 {
                     "date": 1768032581181,
@@ -164,6 +164,14 @@
                 {
                     "date": 1768098945148,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n   const [visible, setVisible] = useState(false);\r\n   return (\r\n     <div className=\"flex items-center justify-between py-5 font-medium\">\r\n-      <img src={assets.logo} className=\"w-36\" alt=\"\" />\r\n+     <Link to=\"/\"> <img src={assets.logo} className=\"w-36\" alt=\"\" /></Link>\r\n \r\n       <ul className=\" hidden sm:flex  gap-5 text-sm text-gray-700\">\r\n         <NavLink to=\"/\" className=\"flex flex-col items-center gap-1\">\r\n           <p>Home</p>\r\n@@ -47,9 +47,9 @@\n           </div>\r\n         </div>\r\n         <Link to=\"/card\" className=\"relative\">\r\n           <img src={assets.cart_icon} className=\"w-5\" alt=\"\" />\r\n-          <p className=\"absolute right-[-5px] bottom-[-5px] w- className='' 4 aspect-square text-center leading-4 bg-black text-white rounded-full text-[8px]\">\r\n+          <p className=\"absolute -right-1.25 -bottom-1.25 w-4 aspect-square text-center leading-4 bg-black text-white rounded-full text-[8px]\">\r\n             11\r\n           </p>\r\n         </Link>\r\n         <img onClick={()=>setVisible(true)} src={assets.menu_icon}  className='w-5 cursor-pointer sm:hidden' alt=\"\" />\r\n"
+                },
+                {
+                    "date": 1768624641617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n-import React, { useState } from \"react\";\r\n+import React, { useContext, useState } from \"react\";\r\n import { assets } from \"../assets/assets\";\r\n import { Link, NavLink } from \"react-router-dom\";\r\n+import { ShopContext } from \"../context/ShopContext\";\r\n \r\n export const Navbar = () => {\r\n \r\n   const [visible, setVisible] = useState(false);\r\n+\r\n+  const {showSearch, setShowSearch} = useContext(ShopContext);\r\n   return (\r\n     <div className=\"flex items-center justify-between py-5 font-medium\">\r\n      <Link to=\"/\"> <img src={assets.logo} className=\"w-36\" alt=\"\" /></Link>\r\n \r\n"
+                },
+                {
+                    "date": 1768624691368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export const Navbar = () => {\r\n \r\n   const [visible, setVisible] = useState(false);\r\n \r\n-  const {showSearch, setShowSearch} = useContext(ShopContext);\r\n+  const { setShowSearch} = useContext(ShopContext);\r\n   return (\r\n     <div className=\"flex items-center justify-between py-5 font-medium\">\r\n      <Link to=\"/\"> <img src={assets.logo} className=\"w-36\" alt=\"\" /></Link>\r\n \r\n@@ -37,9 +37,9 @@\n           <hr className=\"w-2/4 border-none h-[1.5px] bg-gray-700 hidden\" />\r\n         </NavLink>\r\n       </ul>\r\n       <div className=\"flex items-center gap-6\">\r\n-        <img src={assets.search_icon} className=\"w-5 cursor-pointer\" alt=\"\" />\r\n+        <img onClick={() => setShowSearch(true)} src={assets.search_icon} className=\"w-5 cursor-pointer\" alt=\"\" />\r\n         <div className=\"group relative\">\r\n           <img src={assets.profile_icon} className=\"w-5 cursor-pointer\" />\r\n           <div className=\"group-hover:block hidden absolute dropdown-menu right-0 pt-4\">\r\n             <div className=\"flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded\">\r\n"
                 }
             ],
             "date": 1768032581181,

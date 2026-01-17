@@ -1,0 +1,102 @@
+{
+    "sourceFile": "frontend/src/components/SearchBar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1768623373659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768623927170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,11 @@\n \r\n export const SearchBar = () => {\r\n \r\n     const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n-  return (\r\n-    <div>SearchBar</div>\r\n-  )\r\n+  return showSearch ? (\r\n+    <div className='border-t border-b bg-gray-50 text-center'>\r\n+        <div className=\"inline-flex items-center justify-center border border-gray-400 px-5 mx-3 rounded-full w-3/2 sm:w-1/2\">\r\n+        <input className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n+    </div>\r\n+  ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624021076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n     const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n   return showSearch ? (\r\n     <div className='border-t border-b bg-gray-50 text-center'>\r\n         <div className=\"inline-flex items-center justify-center border border-gray-400 px-5 mx-3 rounded-full w-3/2 sm:w-1/2\">\r\n-        <input className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n+        <input value={search} onChange={(event=>(event.target.value))} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n     </div>\r\n   ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624187490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n     const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n   return showSearch ? (\r\n     <div className='border-t border-b bg-gray-50 text-center'>\r\n         <div className=\"inline-flex items-center justify-center border border-gray-400 px-5 mx-3 rounded-full w-3/2 sm:w-1/2\">\r\n-        <input value={search} onChange={(event=>(event.target.value))} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n+        <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n     </div>\r\n   ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624311623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n import React from 'react'\r\n+import { assets } from '../assets/assets';\r\n \r\n export const SearchBar = () => {\r\n \r\n     const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n   return showSearch ? (\r\n     <div className='border-t border-b bg-gray-50 text-center'>\r\n         <div className=\"inline-flex items-center justify-center border border-gray-400 px-5 mx-3 rounded-full w-3/2 sm:w-1/2\">\r\n-        <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' /></div>\r\n+        <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' />\r\n+        <img src={assets.search_icon} className=' w-4  cursor-pointer' alt=\"search\" />\r\n+        </div>\r\n+        <div>\r\n+            <img onClick={() => setShowSearch(false)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n+        </div>\r\n     </div>\r\n   ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624352194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React, { useContext } from 'react'\r\n import { assets } from '../assets/assets';\r\n \r\n export const SearchBar = () => {\r\n \r\n"
+                },
+                {
+                    "date": 1768624379977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React, { useContext } from 'react'\r\n import { assets } from '../assets/assets';\r\n+import { ShopContext } from '../context/ShopContext';\r\n \r\n export const SearchBar = () => {\r\n \r\n     const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n"
+                },
+                {
+                    "date": 1768624466027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' />\r\n         <img src={assets.search_icon} className=' w-4  cursor-pointer' alt=\"search\" />\r\n         </div>\r\n         <div>\r\n-            <img onClick={() => setShowSearch(false)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n+            <img onClick={() => setShowSearch(true)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n         </div>\r\n     </div>\r\n   ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624697032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' />\r\n         <img src={assets.search_icon} className=' w-4  cursor-pointer' alt=\"search\" />\r\n         </div>\r\n         <div>\r\n-            <img onClick={() => setShowSearch(true)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n+            <img onClick={() => setShowSearch(false)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n         </div>\r\n     </div>\r\n   ) : null;\r\n }\r\n"
+                },
+                {
+                    "date": 1768624790200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,39 @@\n+import React, { useContext } from 'react'\r\n+import { assets } from '../assets/assets'\r\n+import { ShopContext } from '../context/ShopContext'\r\n+\r\n+export const SearchBar = () => {\r\n+  const { search, setSearch, showSearch, setShowSearch } =\r\n+    useContext(ShopContext)\r\n+\r\n+  return showSearch ? (\r\n+    <div className=\"border-t border-b bg-gray-50 py-4\">\r\n+      <div className=\"flex items-center justify-center gap-3 px-4\">\r\n+\r\n+        {/* Search box */}\r\n+        <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n+          <input\r\n+            value={search}\r\n+            onChange={(event) => setSearch(event.target.value)}\r\n+            className=\"flex-1 outline-none bg-transparent text-sm text-gray-700 placeholder-gray-400\"\r\n+            type=\"text\"\r\n+            placeholder=\"Search products...\"\r\n+          />\r\n+          <img\r\n+            src={assets.search_icon}\r\n+            className=\"w-4 h-4 cursor-pointer opacity-70 hover:opacity-100\"\r\n+            alt=\"search\"\r\n+          />\r\n+        </div>\r\n+\r\n+        {/* Close icon */}\r\n+        <img\r\n+          onClick={() => setShowSearch(false)}\r\n+          className=\"w-4 h-4 cursor-pointer opacity-70 hover:opacity-100\"\r\n+          src={assets.cross_icon}\r\n+          alt=\"close\"\r\n+        />\r\n+      </div>\r\n+    </div>\r\n+  ) : null\r\n+}\r\n"
+                },
+                {
+                    "date": 1768625134061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b bg-gray-50 py-4\">\r\n+    <div className=\"border-t border-b border-gray-300 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n@@ -36,23 +36,4 @@\n       </div>\r\n     </div>\r\n   ) : null\r\n }\r\n-import React, { useContext } from 'react'\r\n-import { assets } from '../assets/assets';\r\n-import { ShopContext } from '../context/ShopContext';\r\n-\r\n-export const SearchBar = () => {\r\n-\r\n-    const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n-  return showSearch ? (\r\n-    <div className='border-t border-b bg-gray-50 text-center'>\r\n-        <div className=\"inline-flex items-center justify-center border border-gray-400 px-5 mx-3 rounded-full w-3/2 sm:w-1/2\">\r\n-        <input value={search} onChange={(event)=>setSearch(event.target.value)} className='flex-1 outline-none bg-inherit text-sm' type=\"text\" placeholder='Search' />\r\n-        <img src={assets.search_icon} className=' w-4  cursor-pointer' alt=\"search\" />\r\n-        </div>\r\n-        <div>\r\n-            <img onClick={() => setShowSearch(false)} className='inline w-3 cursor-pointer' src={assets.cross_icon} alt=\"\" />\r\n-        </div>\r\n-    </div>\r\n-  ) : null;\r\n-}\r\n"
+                },
+                {
+                    "date": 1768625146307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b border-gray-300 bg-gray-50 py-4\">\r\n+    <div className=\"border-t border-b border-gray-400 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n"
+                },
+                {
+                    "date": 1768625156565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b border-gray-400 bg-gray-50 py-4\">\r\n+    <div className=\"border-t border-b border-gray-400 bg-red-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n"
+                },
+                {
+                    "date": 1768625176393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b border-gray-400 bg-red-50 py-4\">\r\n+    <div className=\"border-t border-b border-resd-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n"
+                },
+                {
+                    "date": 1768625190155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b border-resd-600 bg-gray-50 py-4\">\r\n+    <div className=\"border-t border-b border-red-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n"
+                },
+                {
+                    "date": 1768625224230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const { search, setSearch, showSearch, setShowSearch } =\r\n     useContext(ShopContext)\r\n \r\n   return showSearch ? (\r\n-    <div className=\"border-t border-b border-red-600 bg-gray-50 py-4\">\r\n+    <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n         <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n"
+                },
+                {
+                    "date": 1768625277176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n-        <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-300 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n+        <div className=\"flex items-center w-full sm:w-1/2 max-w-xl border border-gray-400 bg-white px-4 py-2 rounded-full shadow-sm\">\r\n           <input\r\n             value={search}\r\n             onChange={(event) => setSearch(event.target.value)}\r\n             className=\"flex-1 outline-none bg-transparent text-sm text-gray-700 placeholder-gray-400\"\r\n"
+                },
+                {
+                    "date": 1768626864259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n-import React, { useContext } from 'react'\r\n+import React, { useContext, useEffect } from 'react'\r\n import { assets } from '../assets/assets'\r\n import { ShopContext } from '../context/ShopContext'\r\n+import { useLocation } from 'react-router-dom'\r\n \r\n export const SearchBar = () => {\r\n-  const { search, setSearch, showSearch, setShowSearch } =\r\n-    useContext(ShopContext)\r\n+  const { search, setSearch, showSearch, setShowSearch } =useContext(ShopContext)\r\n \r\n+    const location = useLocation();\r\n+\r\n+    // Clear search input when navigating to a different page\r\n+    useEffect(()=>{\r\n+      setSearch('');\r\n+    },[location])\r\n   return showSearch ? (\r\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n"
+                },
+                {
+                    "date": 1768626930272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,12 @@\n     const location = useLocation();\r\n \r\n     // Clear search input when navigating to a different page\r\n     useEffect(()=>{\r\n-      setSearch('');\r\n+        if(location.pathname !== '/collection'){\r\n+            setSearch('');\r\n+            setShowSearch(false);\r\n+        }\r\n     },[location])\r\n   return showSearch ? (\r\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n"
+                },
+                {
+                    "date": 1768627141817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,21 @@\n-import React, { useContext, useEffect } from 'react'\r\n+import React, { useContext, useEffect, useState } from 'react'\r\n import { assets } from '../assets/assets'\r\n import { ShopContext } from '../context/ShopContext'\r\n import { useLocation } from 'react-router-dom'\r\n \r\n export const SearchBar = () => {\r\n   const { search, setSearch, showSearch, setShowSearch } =useContext(ShopContext)\r\n-\r\n+  const [visible, setVisible] = useState(false);\r\n     const location = useLocation();\r\n \r\n     // Clear search input when navigating to a different page\r\n     useEffect(()=>{\r\n-        if(location.pathname !== '/collection'){\r\n-            setSearch('');\r\n-            setShowSearch(false);\r\n+        if(location.pathname.includes('collection') && showSearch){\r\n+           setVisible(true);\r\n+        }else{\r\n+           setVisible(false);\r\n+        \r\n         }\r\n     },[location])\r\n   return showSearch ? (\r\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n"
+                },
+                {
+                    "date": 1768627167841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n            setVisible(false);\r\n         \r\n         }\r\n     },[location])\r\n-  return showSearch ? (\r\n+  return showSearch && visible ? (\r\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n         {/* Search box */}\r\n"
+                },
+                {
+                    "date": 1768627563488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { ShopContext } from '../context/ShopContext'\r\n import { useLocation } from 'react-router-dom'\r\n \r\n export const SearchBar = () => {\r\n-  const { search, setSearch, showSearch, setShowSearch } =useContext(ShopContext)\r\n+  const { search, setSearch, showSearch, setShowSearch } = useContext(ShopContext)\r\n   const [visible, setVisible] = useState(false);\r\n     const location = useLocation();\r\n \r\n     // Clear search input when navigating to a different page\r\n@@ -15,9 +15,9 @@\n         }else{\r\n            setVisible(false);\r\n         \r\n         }\r\n-    },[location])\r\n+    },[location, showSearch])\r\n   return showSearch && visible ? (\r\n     <div className=\"border-t border-b border-gray-600 bg-gray-50 py-4\">\r\n       <div className=\"flex items-center justify-center gap-3 px-4\">\r\n \r\n"
+                }
+            ],
+            "date": 1768623373659,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const SearchBar = () => {\r\n\r\n    const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);\r\n  return (\r\n    <div>SearchBar</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

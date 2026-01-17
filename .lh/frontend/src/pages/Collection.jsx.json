@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 84,
+            "activePatchIndex": 94,
             "patches": [
                 {
                     "date": 1768110779944,
@@ -344,6 +344,46 @@
                 {
                     "date": 1768473908929,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,8 @@\n   },[products])\r\n \r\n   useEffect(()=>{\r\n     applyFilters();\r\n-    \r\n   }, [categoryFilter, typeFilter])\r\n   \r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1768619825063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n   // this code for only set category filter [men, women, kids]\r\n   const handleCategoryFilter = (event) => {\r\n     const value = event.target.value;\r\n-    // remove item if already present\r\n+    // remove item if already present from here only [men, women, kids] not from item list\r\n     if(categoryFilter.includes(value)){\r\n       setCategoryFilter(categoryFilter.filter((item)=> item !== value));\r\n   }\r\n   else{\r\n@@ -29,18 +29,17 @@\n // this code for only set type filter [topwear, bottomwear, winterwear]\r\n const handleTypeFilter=(event)=>{\r\n   const value = event.target.value;\r\n   if(typeFilter.includes(value)){\r\n-    // remove item if already present\r\n+    // remove item if already present from here only [topwear, bottomwear, winterwear] not from item list\r\n     setTypeFilter(typeFilter.filter((item)=> item !== value));\r\n }else{\r\n   // add all item\r\n   setTypeFilter(prev => [...prev, value]);\r\n }\r\n \r\n }\r\n \r\n-\r\n // this code for applying all filters  take men or women form handleCategoryFilter and filter products                                          \r\n const applyFilters = () => {\r\n   let productsAfterCategoryFilter = products.slice();\r\n   if(categoryFilter.length > 0){\r\n@@ -55,13 +54,25 @@\n   }\r\n   setFilteredProducts(productsAfterCategoryFilter);\r\n }\r\n \r\n+const sortProducts = ()=> {\r\n+  let filteredProductsCopy = filteredProducts.slice();\r\n+  // sorting logic here\r\n+  switch(sortOption){\r\n+    case 'low-high':\r\n+  setFilteredProducts(filteredProductsCopy.sort((a,b)=>(a.price - b.price)));\r\n+  break;\r\n+    case 'high-low':\r\n+  setFilteredProducts(filteredProductsCopy.sort((a,b)=>(b.price - a.price)));\r\n+  break;\r\n \r\n-  useEffect(()=>{ \r\n-    setFilteredProducts(products);\r\n-  },[products])\r\n \r\n+  switch(sortOption){\r\n+    case 'low-high':\r\n+\r\n+}\r\n+}\r\n   useEffect(()=>{\r\n     applyFilters();\r\n   }, [categoryFilter, typeFilter])\r\n   \r\n@@ -128,4 +139,5 @@\n       </div>\r\n     </div>\r\n   )\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1768619845861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,11 +66,8 @@\n   setFilteredProducts(filteredProductsCopy.sort((a,b)=>(b.price - a.price)));\r\n   break;\r\n \r\n \r\n-  switch(sortOption){\r\n-    case 'low-high':\r\n-\r\n }\r\n }\r\n   useEffect(()=>{\r\n     applyFilters();\r\n"
+                },
+                {
+                    "date": 1768622033170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,8 +64,11 @@\n   break;\r\n     case 'high-low':\r\n   setFilteredProducts(filteredProductsCopy.sort((a,b)=>(b.price - a.price)));\r\n   break;\r\n+  default:\r\n+    applyFilters();\r\n+  }\r\n \r\n \r\n }\r\n }\r\n"
+                },
+                {
+                    "date": 1768622123467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   const [showFilter, setShowFilter] = useState(false);\r\n   const [filteredProducts, setFilteredProducts] = useState([]);\r\n   const [categoryFilter, setCategoryFilter] = useState([]);\r\n   const [typeFilter, setTypeFilter] = useState([]);\r\n+  const[sortOption, setSortOption] = useState('relevant');  \r\n \r\n \r\n   // this code for only set category filter [men, women, kids]\r\n   const handleCategoryFilter = (event) => {\r\n@@ -67,10 +68,8 @@\n   break;\r\n   default:\r\n     applyFilters();\r\n   }\r\n-\r\n-\r\n }\r\n }\r\n   useEffect(()=>{\r\n     applyFilters();\r\n@@ -119,9 +118,9 @@\n       <div className=\"flex-1\">\r\n         <div className=\"flex justify-between text-base sm:text-2xl mb-4\">\r\n           <Title text1={'ALL'} text2={\"COLLECTIONS\"}/>\r\n           {/* product sort */}\r\n-          <select className='border border-gray-300 text-sm px-2'>\r\n+          <select onChange={(event)=> setSortOption(event.target.value)} className='border border-gray-300 text-sm px-2'>\r\n             <option value=\"newest\">Sort by: Relavent</option>\r\n             <option value=\"price_low_high\">Sort by: Low to High</option>\r\n             <option value=\"price_high_low\">Sort by: High to Low</option>\r\n           </select>\r\n"
+                },
+                {
+                    "date": 1768622253672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,12 @@\n   default:\r\n     applyFilters();\r\n   }\r\n }\r\n+useEffect(()=>{\r\n+  sortProducts();\r\n+}, [sortOption]);\r\n+\r\n }\r\n   useEffect(()=>{\r\n     applyFilters();\r\n   }, [categoryFilter, typeFilter])\r\n"
+                },
+                {
+                    "date": 1768622398635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n useEffect(()=>{\r\n   sortProducts();\r\n }, [sortOption]);\r\n \r\n-}\r\n+\r\n   useEffect(()=>{\r\n     applyFilters();\r\n   }, [categoryFilter, typeFilter])\r\n   \r\n"
+                },
+                {
+                    "date": 1768622495674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,12 +59,12 @@\n const sortProducts = ()=> {\r\n   let filteredProductsCopy = filteredProducts.slice();\r\n   // sorting logic here\r\n   switch(sortOption){\r\n-    case 'low-high':\r\n+    case 'price_low_high':\r\n   setFilteredProducts(filteredProductsCopy.sort((a,b)=>(a.price - b.price)));\r\n   break;\r\n-    case 'high-low':\r\n+    case 'price_high_low':\r\n   setFilteredProducts(filteredProductsCopy.sort((a,b)=>(b.price - a.price)));\r\n   break;\r\n   default:\r\n     applyFilters();\r\n@@ -123,9 +123,9 @@\n         <div className=\"flex justify-between text-base sm:text-2xl mb-4\">\r\n           <Title text1={'ALL'} text2={\"COLLECTIONS\"}/>\r\n           {/* product sort */}\r\n           <select onChange={(event)=> setSortOption(event.target.value)} className='border border-gray-300 text-sm px-2'>\r\n-            <option value=\"newest\">Sort by: Relavent</option>\r\n+            <option value=\"relevant\">Sort by: Relevant</option>\r\n             <option value=\"price_low_high\">Sort by: Low to High</option>\r\n             <option value=\"price_high_low\">Sort by: High to Low</option>\r\n           </select>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1768622799080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,9 @@\n   default:\r\n     applyFilters();\r\n   }\r\n }\r\n+\r\n useEffect(()=>{\r\n   sortProducts();\r\n }, [sortOption]);\r\n \r\n"
+                },
+                {
+                    "date": 1768629629924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import { Title } from '../components/Title';\r\n import { ProductItem } from '../components/ProductItem';\r\n \r\n export const Collection = () => {\r\n-  const {products} = useContext(ShopContext);\r\n+  const {products,} = useContext(ShopContext);\r\n \r\n   const [showFilter, setShowFilter] = useState(false);\r\n   const [filteredProducts, setFilteredProducts] = useState([]);\r\n   const [categoryFilter, setCategoryFilter] = useState([]);\r\n@@ -42,8 +42,13 @@\n \r\n // this code for applying all filters  take men or women form handleCategoryFilter and filter products                                          \r\n const applyFilters = () => {\r\n   let productsAfterCategoryFilter = products.slice();\r\n+\r\n+  // search query filter\r\n+  if(showSearch && search){\r\n+    productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()));\r\n+  }\r\n   if(categoryFilter.length > 0){\r\n     productsAfterCategoryFilter = productsAfterCategoryFilter.filter((item)=> \r\n       categoryFilter.includes(item.category)\r\n     );\r\n@@ -77,9 +82,9 @@\n \r\n \r\n   useEffect(()=>{\r\n     applyFilters();\r\n-  }, [categoryFilter, typeFilter])\r\n+  }, [categoryFilter, typeFilter,search, showSearch]);\r\n   \r\n   \r\n   return (\r\n     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>\r\n"
+                },
+                {
+                    "date": 1768629713842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import { Title } from '../components/Title';\r\n import { ProductItem } from '../components/ProductItem';\r\n \r\n export const Collection = () => {\r\n-  const {products,} = useContext(ShopContext);\r\n+  const {products, search, showSearch} = useContext(ShopContext);\r\n \r\n   const [showFilter, setShowFilter] = useState(false);\r\n   const [filteredProducts, setFilteredProducts] = useState([]);\r\n   const [categoryFilter, setCategoryFilter] = useState([]);\r\n"
                 }
             ],
             "date": 1768110779944,
