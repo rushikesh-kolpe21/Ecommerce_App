@@ -14,7 +14,6 @@ connectCloudinary();
 
 // app configuration
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
@@ -45,7 +44,12 @@ app.use('/api/products', produtRouter);
 const userRouter = require('./routes/userRouter');
 app.use('/api/user', userRouter);
 
-// start server
-app.listen(PORT, () => {
+// Start server locally; Vercel provides its own listener
+const PORT = process.env.PORT || 5000;
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
-});
+  });
+}
+
+module.exports = app;
