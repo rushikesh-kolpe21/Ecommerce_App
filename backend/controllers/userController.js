@@ -48,8 +48,6 @@ const registerUser = async (req, res) => {
             const token = createToken(newUser._id)
             res.json({success:true, token})
 
-
-
     } catch (error) {
         console.log(error);
         res.json({success:false, message:error.message});

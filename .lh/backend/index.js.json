@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1769428751480,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1769494902063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,11 @@\n \r\n \r\n // app configuration\r\n const app = express();\r\n-const PORT = process.env.PORT || 5000;\r\n \r\n app.get(\"/\", (req, res) => {\r\n-  res.send(\"Backend is running 🚀\");\r\n+  res.send(\"Backend is running \");\r\n });\r\n \r\n \r\n \r\n@@ -44,8 +43,13 @@\n // user routes\r\n const userRouter = require('./routes/userRouter');\r\n app.use('/api/user', userRouter);\r\n \r\n-// start server\r\n-app.listen(PORT, () => {\r\n+// Start server locally; Vercel provides its own listener\r\n+const PORT = process.env.PORT || 5000;\r\n+if (!process.env.VERCEL) {\r\n+  app.listen(PORT, () => {\r\n     console.log(`Server is running on port: ${PORT}`);\r\n-});\r\n+  });\r\n+}\r\n+\r\n+module.exports = app;\r\n"
+                },
+                {
+                    "date": 1769495077942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n const express = require('express');\r\n \r\n+// to handle cross origin requests \r\n const cors = require('cors');\r\n require('dotenv/config');\r\n \r\n \r\n@@ -15,9 +16,9 @@\n // app configuration\r\n const app = express();\r\n \r\n app.get(\"/\", (req, res) => {\r\n-  res.send(\"Backend is running \");\r\n+  res.send(\"Backend is running successfully\");\r\n });\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1769495725089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const express = require('express');\r\n \r\n-// to handle cross origin requests \r\n+// to handle cross origin requests from frontend to backend (28)\r\n const cors = require('cors');\r\n+\r\n require('dotenv/config');\r\n \r\n \r\n // database connection (directly importing to establish connection)\r\n@@ -25,8 +26,9 @@\n // middleware\r\n app.use(express.json()); // data ko read/parse\r\n app.use(cors()); // // Enable CORS so frontend (different origin) can access backend APIs\r\n \r\n+\r\n // order routes\r\n const orderRouter = require('./routes/orderRoute');\r\n // Mount without trailing spaces to avoid 404s\r\n app.use('/api/order', orderRouter);\r\n"
                 }
             ],
             "date": 1769428751479,

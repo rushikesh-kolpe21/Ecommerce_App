@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect, useState } from 'react'
+import React, {  useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -18,7 +18,7 @@ export const Login = () => {
     // handle login or signup logic here
     try {
       if(currentState === 'SignUp'){
-        const response = await axios.post(backendUrl + '/api/user/register', {
+         const response = await axios.post(backendUrl + '/api/user/register', {
           userName: name,
           email,
           password
@@ -29,7 +29,7 @@ export const Login = () => {
           localStorage.setItem('token', response.data.token);
           toast.success('Account created successfully!');
         } else {
-          toast.error(response.data.message)
+          toast.error(response.data.message);
         }
       } else if(currentState === "Login"){
         const response = await axios.post(backendUrl + '/api/user/login',{

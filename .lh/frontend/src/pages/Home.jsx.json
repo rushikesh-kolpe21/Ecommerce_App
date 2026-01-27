@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1769485870899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1769487909523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import { LatestCollection } from '../components/LatestCollection'\r\n import { BestSellers } from '../components/BestSellers'\r\n import { OurPolicy } from '../components/OurPolicy'\r\n import { NewsLetterBox } from '../components/NewsLetterBox'\r\n-import { Footer } from '../components/Footer'\r\n \r\n export const Home = () => {\r\n   return (\r\n     <div>\r\n"
+                }
+            ],
+            "date": 1769485870898,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport { Hero } from '../components/Hero'\r\nimport { LatestCollection } from '../components/LatestCollection'\r\nimport { BestSellers } from '../components/BestSellers'\r\nimport { OurPolicy } from '../components/OurPolicy'\r\nimport { NewsLetterBox } from '../components/NewsLetterBox'\r\nimport { Footer } from '../components/Footer'\r\n\r\nexport const Home = () => {\r\n  return (\r\n    <div>\r\n      <Hero/>\r\n      <LatestCollection/>\r\n      <BestSellers/>\r\n      <OurPolicy/>\r\n      <NewsLetterBox/>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

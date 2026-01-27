@@ -3,8 +3,10 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+// create context 
 export const ShopContext = createContext();
 
+// context provider
 export const ShopContextProvider = (props) => {
   const currency = "$";
   const delivery_fee = 10;
@@ -15,7 +17,10 @@ export const ShopContextProvider = (props) => {
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState("");
   const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
+
+  //
 
   const addToCart = async (itemId, size) => {
     if (!size) {
@@ -23,15 +28,20 @@ export const ShopContextProvider = (props) => {
       return;
     }
 
+    // deep clone cartItems to avoid direct state mutation
     let cartData = structuredClone(cartItems);
 
+    // add item to cart logic
     if (cartData[itemId]) {
+      // item already in cart
       if (cartData[itemId][size]) {
         cartData[itemId][size] += 1;
       } else {
+        // size not present for this item
         cartData[itemId][size] = 1;
       }
     } else {
+      // item not in cart
       cartData[itemId] = {};
       cartData[itemId][size] = 1;
     }
@@ -51,16 +61,21 @@ export const ShopContextProvider = (props) => {
     }
   };
 
+
+  // cart bag count
+  //
   const getCartCount = () => {
     let totalCount = 0;
     for (const itemId in cartItems) {
       for (const size in cartItems[itemId]) {
-        totalCount += cartItems[itemId][size];
+        totalCount = totalCount + cartItems[itemId][size];
       }
     }
     return totalCount;
   };
 
+
+  //
   const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
@@ -80,6 +95,7 @@ export const ShopContextProvider = (props) => {
     }
   };
 
+  // total amount
   const getTotalAmount = () => {
     let totalAmount = 0;
     for (const itemId in cartItems) {
@@ -92,6 +108,7 @@ export const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
+  // fetch products data from backend api
   const getProductsData = async () => {
     try {
       setLoading(true);
@@ -116,6 +133,7 @@ export const ShopContextProvider = (props) => {
     }
   };
 
+  // fetch cart data from backend api
   const getUserCart = async (authToken) => {
     try {
       const tokenToUse = authToken || token;
@@ -158,6 +176,7 @@ export const ShopContextProvider = (props) => {
     }
   }, [token, backendUrl]);
 
+  
   const value = {
     products,
     currency,
@@ -181,6 +200,8 @@ export const ShopContextProvider = (props) => {
   };
 
   return (
+
+    // provide context to children components
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
   );
 };

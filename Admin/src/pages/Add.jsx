@@ -37,7 +37,7 @@ export const Add = ({ token }) => {
       formData.append("sizes", JSON.stringify(sizes));// Convert sizes array to JSON string
 
       // send formData to backend api
-      const response = await axios.post(backendUrl + "/api/products/add", formData, { headers: { token } }); // token sending to backend for auth
+      const response = await axios.post(backendUrl + "/api/products/add", formData, { headers: { token } });  // token sending to backend for auth
       
       if (response.data.success) {
         toast.success(response.data.message);

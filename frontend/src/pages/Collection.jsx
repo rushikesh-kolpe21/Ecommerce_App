@@ -8,6 +8,7 @@ export const Collection = () => {
 
   const {products, search, showSearch, loading} = useContext(ShopContext);
 
+
   const [showFilter, setShowFilter] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState([]);
@@ -28,6 +29,7 @@ export const Collection = () => {
   }
 }
 
+
 // this code for only set type filter [topwear, bottomwear, winterwear]
 const handleTypeFilter=(event)=>{
   const value = event.target.value;
@@ -40,6 +42,7 @@ const handleTypeFilter=(event)=>{
 }
 
 }
+
 
 // this code for applying all filters  take men or women form handleCategoryFilter and filter products                                          
 const applyFilters = () => {
@@ -64,6 +67,8 @@ const applyFilters = () => {
 
 // sorting function
 const sortProducts = ()=> {
+
+  // create a copy of filteredProducts to avoid mutating state directly
   let filteredProductsCopy = filteredProducts.slice();
   // sorting logic here
   switch(sortOption){

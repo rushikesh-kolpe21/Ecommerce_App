@@ -1,6 +1,8 @@
 const express = require('express');
 
+// to handle cross origin requests from frontend to backend (28)
 const cors = require('cors');
+
 require('dotenv/config');
 
 
@@ -16,7 +18,7 @@ connectCloudinary();
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
+  res.send("Backend is running successfully");
 });
 
 
@@ -24,6 +26,7 @@ app.get("/", (req, res) => {
 // middleware
 app.use(express.json()); // data ko read/parse
 app.use(cors()); // // Enable CORS so frontend (different origin) can access backend APIs
+
 
 // order routes
 const orderRouter = require('./routes/orderRoute');

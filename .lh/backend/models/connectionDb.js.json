@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/models/connectionDb.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1769497725012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1769497725011,
+            "name": "Commit-0",
+            "content": "\r\nconst mongoose = require('mongoose');\r\n\r\nconst mongo_url = process.env.MONGO_CONN;\r\n\r\nmongoose.connect(mongo_url)\r\n.then(conn => {\r\n  console.log(\" MongoDB Connected:\", conn.connection.host);\r\n})\r\n.catch(err => {\r\n  console.error(\" MongoDB connection error:\", err);\r\n });\r\n"
+        }
+    ]
+}

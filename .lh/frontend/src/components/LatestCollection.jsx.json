@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/components/LatestCollection.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1769488929956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1769488929956,
+            "name": "Commit-0",
+            "content": "import React, {  useContext, useEffect, useState } from 'react'\r\nimport { ShopContext } from '../context/ShopContext';\r\nimport { Title } from './Title';\r\nimport { ProductItem } from './ProductItem';\r\n\r\n\r\nexport const LatestCollection = () => {\r\n\r\n    const {products, loading} = useContext(ShopContext);\r\n    const [latestProducts,setLatestProducts] = useState([]);\r\n\r\n    useEffect(()=>{\r\n        if (products && products.length > 0) {\r\n            setLatestProducts(products.slice(0, 10));\r\n        }\r\n    },[products]);\r\n\r\n  return (\r\n    <div className='my-10'>\r\n        <div className='text-center py-8 text-3xl'>\r\n            <Title text1={'LATEST'} text2={'COLLECTION'}/>\r\n            <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>\r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim alias teme commodi quia odit! Obcaecati </p>\r\n        </div>\r\n        {/* rendering latest products */}\r\n        <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-6 '>\r\n            {loading ? (\r\n                <p className='text-center col-span-full'>Loading products...</p>\r\n            ) : latestProducts.length > 0 ? (\r\n                latestProducts.map((item, index)=>(\r\n                   <ProductItem  key={index} id={item._id} name={item.name} image={item.image} currency={item.currency} price={item.price} />\r\n                ))\r\n            ) : (\r\n                <p className='text-center col-span-full'>No products available</p>\r\n            )}\r\n        </div>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
