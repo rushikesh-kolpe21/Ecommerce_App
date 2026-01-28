@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/routes/orderRoute.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1769591138306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1769591138306,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\n\r\nconst { placeOrderCOD,placeOrderStripe, placeOrderRazorpay, getAllOrders, getUserOrders, updateOrderStatus,verifyStripePayment } = require('../controllers/orderController');\r\nconst authMiddleware = require('../middleware/auth');\r\nconst adminAuth = require('../middleware/adminAuth');\r\n\r\nconst orderRoute = express.Router();\r\n\r\n// admin features\r\norderRoute.get('/all-list', adminAuth, getAllOrders);\r\norderRoute.post('/update-status', adminAuth, updateOrderStatus);\r\n\r\n// payment methods\r\norderRoute.post('/place-order-cod', authMiddleware,   placeOrderCOD);\r\norderRoute.post('/place-order-stripe', authMiddleware, placeOrderStripe);\r\norderRoute.post('/place-order-razorpay', authMiddleware, placeOrderRazorpay);\r\n\r\n// user orders\r\norderRoute.get('/user-orders', authMiddleware, getUserOrders);\r\n\r\n// verify stripe payment\r\norderRoute.post('/verify-stripe-payment', authMiddleware, verifyStripePayment);\r\n\r\nmodule.exports = orderRoute;"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/models/orderModel.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1769590898790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1769590898789,
+            "name": "Commit-0",
+            "content": "import mongoose from 'mongoose';\r\n\r\nconst orderSchema = new mongoose.Schema({\r\n    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },\r\n    items: { type: Object, required: true }, // { itemId: { size: quantity } }\r\n    amount: { type: Number, required: true },\r\n    address: { type: String, required: true },\r\n    status: { type: String, required:true, default: 'Pending' },\r\n    PaymentMethod: { type: String, required: true },\r\n    payment:{ type:Boolean, required:true, default:false},\r\n    createdAt: { type: Date, default: Date.now }\r\n});       \r\n\r\nexport default mongoose.model('Order', orderSchema);"
+        }
+    ]
+}

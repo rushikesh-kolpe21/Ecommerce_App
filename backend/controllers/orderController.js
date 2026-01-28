@@ -54,7 +54,7 @@ const placeOrderStripe = async (req, res) => {
 
          const {origin} = req.headers;
 
-        //  order data
+  
          // create new order document
         const newOrder = new orderModel({
             userId,
@@ -90,6 +90,7 @@ const placeOrderStripe = async (req, res) => {
                 quantity: 1,
             });
 
+            //This creates a temporary payment session on Stripe
             const session = await stripe.checkout.sessions.create({
                 success_url: `${origin}/verify?success=true&orderId=${newOrder._id}`,
                 cancel_url: `${origin}/verify?canceled=true&orderId=${newOrder._id}`,
@@ -107,6 +108,7 @@ const placeOrderStripe = async (req, res) => {
 // verfiy payment and update order status
 const verifyStripePayment = async (req, res) => {
     try {
+       
         const { orderId, success } = req.body;
         const userId = req.userId; 
         if (success == 'true' || success === true) {
@@ -120,7 +122,6 @@ const verifyStripePayment = async (req, res) => {
 } catch (error) {
         console.log(error);
         res.json({ success: false, message: error.message });
-        
     }
 }
 

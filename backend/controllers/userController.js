@@ -5,10 +5,13 @@ const jwt = require("jsonwebtoken");
 
 // function to create JWT token
 const createToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, {
-        expiresIn: '2d',
-    });
-}
+  return jwt.sign(
+    { id },                    // payload
+    process.env.JWT_SECRET,    // secret key
+    { expiresIn: '2d' }        // options
+  );
+};
+
 
 
 // route for user registration
@@ -68,7 +71,7 @@ const loginUser = async (req, res) => {
             return res.status(200).json({success: false, message: "User not found. Please check your email"});
         }
         // if user exit with matching password
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = await bcrypt.compare(password, user.password); // new  old db
 
         if(isMatch){
             // generate token

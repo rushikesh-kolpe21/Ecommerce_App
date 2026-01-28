@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1769497725014,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1769589251436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,17 @@\n const jwt = require(\"jsonwebtoken\");\r\n \r\n // function to create JWT token\r\n const createToken = (id) => {\r\n-    return jwt.sign({ id }, process.env.JWT_SECRET, {\r\n-        expiresIn: '2d',\r\n-    });\r\n-}\r\n+  return jwt.sign(\r\n+    { id },                    // payload\r\n+    process.env.JWT_SECRET,    // secret key\r\n+    { expiresIn: '2d' }        // options\r\n+  );\r\n+};\r\n \r\n \r\n+\r\n // route for user registration\r\n const registerUser = async (req, res) => {\r\n     try {\r\n          const {userName, email, password} = req.body;\r\n@@ -67,9 +70,9 @@\n         if(!user){\r\n             return res.status(200).json({success: false, message: \"User not found. Please check your email\"});\r\n         }\r\n         // if user exit with matching password\r\n-        const isMatch = await bcrypt.compare(password, user.password);\r\n+        const isMatch = await bcrypt.compare(password, user.password); // new  old db\r\n \r\n         if(isMatch){\r\n             // generate token\r\n             const token = createToken(user._id);\r\n"
                 }
             ],
             "date": 1769497725014,
